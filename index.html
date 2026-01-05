@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Neuland Symbol</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="icons/icon-192x192.png"
+    />
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png" />
+    <link
+      rel="shortcut icon"
+      href="favicon/favicon-96x96.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="bg-black">
+    <div id="app-container">
+      <div id="symbol-container">
+        <svg
+          id="symbol-display"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        ></svg>
+      </div>
+      <div id="controls-container">
+        <button id="new-symbol-btn" class="btn">New Random Symbol</button>
+        <button id="settings-btn" class="btn">
+          <svg
+            viewBox="0 0 24 24"
+            width="24"
+            height="24"
+            stroke="currentColor"
+            stroke-width="2"
+            fill="none"
+          >
+            <path d="M12 14a2 2 0 100-4 2 2 0 000 4z" />
+            <path d="M20 12a8 8 0 11-16 0 8 8 0 0116 0z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Settings Modal -->
+    <div id="settings-modal" class="modal">
+      <div class="modal-content">
+        <h2>Select Symbols to Display</h2>
+        <p class="attribution">
+          Concept by Pedro Amado, FBAUP/i2ADS, 2025<br />
+          Design and Development by Claude / Anthropic<br /><br />
+          © 2025 Pedro Amado. All rights reserved.<br />
+          Created with Claude 3.5 Sonnet by Anthropic.
+        </p>
+        <div class="select-buttons">
+          <button id="select-all-btn" class="btn btn-secondary">
+            Select All
+          </button>
+          <button id="select-none-btn" class="btn btn-secondary">
+            Select None
+          </button>
+        </div>
+        <div class="symbol-checklist">
+          <!-- Checkboxes will be inserted here by JavaScript -->
+        </div>
+        <button id="set-symbols-btn" class="btn btn-dark">Set Symbols</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
